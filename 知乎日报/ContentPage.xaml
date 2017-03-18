@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="知乎日报.ContentPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:知乎日报"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<AppBarButton Click="hamburger_Click" Name="hamburger" Foreground="White" Height="48" Background="#6af" Width="48">
+			<AppBarButton.Icon>
+				<!--hamburger time-->
+				<SymbolIcon Symbol="Cancel"/>
+			</AppBarButton.Icon>
+		</AppBarButton>
+		<Grid Background="#6af" Height="48" VerticalAlignment="Top" Margin="48 0 0 0">
+			<TextBlock Margin="0 10 0 0"   Foreground="White"  FontSize="20" Text=" 知乎日报"/>
+			<AppBarButton Name="addcollection" Icon="SolidStar" HorizontalAlignment="Right" Foreground="White" />
+		</Grid>
+		<WebView Margin="0 48 0 0" Name="webview" NavigationCompleted="webview_NavigationCompleted"/>
+		<ProgressRing Name="progressring" Foreground="#48f" Height="60" Width="60" IsActive="True"/>
+	</Grid>
+</Page>
